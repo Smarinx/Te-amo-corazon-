@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para ti mi corazón</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="image-bg">
+        <div class="image" style="background-image: url('https://github.com/Smarinx/Fotos/raw/a7a01ee0f6fab21c57fe688a6b6a1946ffe2cc6c/WhatsApp%20Image%202024-10-12%20at%2021.56.37.jpeg');"></div>
+        <div class="image" style="background-image: url('https://github.com/Smarinx/Fotos/raw/a7a01ee0f6fab21c57fe688a6b6a1946ffe2cc6c/WhatsApp%20Image%202024-10-12%20at%2022.03.43.jpeg');"></div>
+        <div class="image" style="background-image: url('https://github.com/Smarinx/Fotos/raw/a7a01ee0f6fab21c57fe688a6b6a1946ffe2cc6c/WhatsApp%20Image%202024-10-12%20at%2022.05.24.jpeg');"></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/26/Spotify_logo_with_text.svg" alt="Spotify Logo" class="spotify-logo">
+        </div>
+        <div class="song-info">
+            <h1><a href="https://open.spotify.com/intl-es/track/0ayKzsjvuTOvwMBhcjxdNB?si=ee6c00b1300c4f7f" target="_blank" style="text-decoration:none; color:inherit;">Me gusta, Me gusta</a></h1>
+            <p>Silvestre Dangond</p>
+        </div>
+        <div class="flowers">
+            <img src="https://cdn-icons-png.flaticon.com/512/7039/7039043.png" alt="Flor 1" class="flower">
+        </div>
+    </div>
+
+    <!-- Script para generar imágenes al hacer clic -->
+    <script>
+        document.body.addEventListener('click', function (e) {
+            const pulseImage = document.createElement('div');
+            pulseImage.className = 'pulse-image';
+            pulseImage.style.left = `${e.clientX}px`;
+            pulseImage.style.top = `${e.clientY}px`;
+            document.body.appendChild(pulseImage);
+            setTimeout(() => {
+                pulseImage.remove();
+            }, 2000);
+        });
+    </script>
+</body>
+</html>

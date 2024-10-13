@@ -1,0 +1,112 @@
+body {
+    background-color: #f790f7cb;
+    font-family: 'Times New Roman', Times, serif, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 300px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.header {
+    background-color: #191414;
+    padding: 10px;
+}
+
+.spotify-logo {
+    height: 40px;
+}
+
+.song-info {
+    padding: 10px;
+}
+
+.flowers {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.flower {
+    height: 100px;
+    margin: 0 10px;
+}
+
+/* Efecto de pulso para las imágenes */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.image-bg {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.image {
+    width: 300px;
+    height: 300px;
+    background-size: cover;
+    position: absolute;
+    animation: pulse 2s infinite;
+    opacity: 0.8;
+}
+
+.image:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-duration: 1.5s;
+}
+
+.image:nth-child(2) {
+    top: 30%;
+    left: 70%;
+    animation-duration: 2s;
+}
+
+.image:nth-child(3) {
+    top: 50%;
+    left: 30%;
+    animation-duration: 2.5s;
+}
+
+.pulse-image {
+    width: 70px;
+    height: 70px;
+    background: url('https://github.com/Smarinx/Fotos/raw/a7a01ee0f6fab21c57fe688a6b6a1946ffe2cc6c/WhatsApp%20Image%202024-10-12%20at%2022.03.43.jpeg') no-repeat center center;
+    background-size: contain;
+    position: absolute;
+    animation: pulse 2s infinite;
+}
